@@ -2,7 +2,7 @@
 
 # Instrukcija
 
-Parsisiųsti repo ir paleisti .html failą naršyklėje, arba atverti github sugeneruotą nuorodą (https://kristinabaks.github.io/valiutu-kursai-uzduotis/).
+Parsisiųsti repo ir paleisti .html failą naršyklėje.
 
 # Naudotos technologijos
 
