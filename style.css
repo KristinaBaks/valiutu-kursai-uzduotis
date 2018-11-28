@@ -1,0 +1,81 @@
+body {
+    background-image: linear-gradient(to bottom, #7c6892,#281a3a);
+    /* background-image: linear-gradient(to bottom, #6b7c9b,#212f46); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    min-height: 100vh;
+}  
+.table {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 255, 255, .5);
+}
+.table > .tbody > .tr:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+.menu-button {
+    margin-bottom: 10px;
+    white-space: normal;
+}  
+.btn,
+.btn:link,
+.btn:visited { 
+    background-color: #f5eb63;
+    color: #312146;
+    border-radius: 0;
+    border: none;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-weight: bolder;
+    box-shadow: none;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.btn:hover{
+    letter-spacing: 6px;
+    color: #312146;
+}
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    color: #312146;
+}
+h1 { 
+    color: #f5eb63;
+    font-weight: 900;
+}
+select {
+    text-transform: uppercase;
+    word-break: break-all;
+    letter-spacing: 2px;
+    text-align-last: center;
+    background: transparent;
+    padding: 12px 16px;
+}
+input {
+    background: transparent;
+    border: 1px solid rgb(169, 169, 169);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 12px 16px;
+    overflow: hidden;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+select:hover,
+input:hover {
+    border-color: #f2f46e;
+}
+select option:focus,
+select:focus,
+input:focus {
+    outline: none;
+    background-color: #281a3a;
+    border-color: #f2f46e;
+}

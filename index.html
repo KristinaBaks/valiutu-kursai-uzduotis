@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Valiutų kursai - užduotis</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <center><h1>Valiutų kursai</h1></center>
+    </div>
+</div>
+<div class="container">
+    <div class="col-xs-12">
+        <label for="select">Pasirinkite valiutą</label>
+        <select name="select" class="col-xs-12 menu-button currency-selection" required>
+            <option value="all-currencies">Visos valiutos</option>  
+            <option value="AUD">Australijos doleris (AUD)</option>
+            <option value="BGN">Bulgarijos levas (BGN)</option>
+            <option value="BRL">Brazilijos realas (BRL)</option>
+            <option value="CAD">Kanados doleris (CAD)</option>
+            <option value="CHF">Šveicarijos frankas (CHF)</option>
+            <option value="CNY">Kinijos ženminbi juanis (CNY)</option>
+            <option value="CZK">Čekijos krona (CZK)</option>
+            <option value="DKK">Danijos krona (DKK)</option>
+            <option value="GBP">Didžiosios Britanijos svaras sterlingų (GBP)</option>
+            <option value="HKD">Honkongo doleris (HKD)</option>
+            <option value="HRK">Kroatijos kuna (HRK)</option>
+            <option value="HUF">Vengrijos forintas (HUF)</option>
+            <option value="IDR">Indonezijos rupija (IDR)</option>
+            <option value="ILS">Izraelio naujasis šekelis (ILS)</option>
+            <option value="INR">Indijos rupija (INR)</option>
+            <option value="ISK">Islandijos krona (ISK)</option>
+            <option value="JPY">Japonijos jena (JPY)</option>
+            <option value="KRW">Pietų Korėjos vonas (KRW)</option>
+            <option value="MXN">Meksikos pesas (MXN)</option>
+            <option value="MYR">Malaizijos ringitas (MYR)</option>
+            <option value="NOK">Norvegijos krona (NOK)</option>
+            <option value="NZD">Naujosios Zelandijos doleris (NZD)</option>
+            <option value="PHP">Filipinų pesas (PHP)</option>
+            <option value="PLN">Lenkijos zlotas (PLN)</option>
+            <option value="RON">Rumunijos lėja (RON)</option>
+            <option value="RUB">Rusijos rublis (RUB)</option>
+            <option value="SEK">Švedijos krona (SEK)</option>
+            <option value="SGD">Singapūro doleris (SGD)</option>
+            <option value="THB">Tailando batas (THB)</option>
+            <option value="TRY">Turkijos lira (TRY)</option>
+            <option value="USD">JAV doleris (USD)</option>
+            <option value="ZAR">Pietų Afrikos Respublikos randas (ZAR)</option>
+        </select>
+        <br>
+        <label for="calendar-1">Pasirinkite datą arba periodą (nuo)</label> 
+        <br>
+        <input type="date" name="calendar-1" class="col-xs-12 calendar-1" min="2014-09-30" max="">
+        <br>
+        <label for="calendar-2">Pasirinkite datą (iki)</label> 
+        <br>
+        <input type="date" name="calendar-2" class="col-xs-12 calendar-2" max="">
+        <br>
+        <button class="btn btn-md col-xs-12 filter-btn menu-button">Ieškoti
+        </button>
+    </div>
+    <div class="col-xs-12">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Valiutos pavadinimas</th>
+                <th>Valiutos kodas</th>
+                <th>Data (nuo)</th>
+                <th>Santykis (nuo)</th>
+                <th>Data (iki)</th>
+                <th>Santykis (iki)</th>
+                <th>Pokytis %</th>
+            </tr>
+            </thead>
+            <tbody class="tbody">
+            <tr class="tr"> 
+                    <td class="td-pavadinimas">...</td>
+                    <td class="td-kodas">...</td>
+                    <td class="td-data-nuo">...</td>
+                    <td class="td-santykis-nuo">...</td>
+                    <td class="td-data-iki">...</td>
+                    <td class="td-santykis-iki">...</td>
+                    <td class="td-pokytis">...</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="app.js" type="text/javascript"></script>
+</body>
+</html>
