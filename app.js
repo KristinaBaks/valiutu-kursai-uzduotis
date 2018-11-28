@@ -38,25 +38,27 @@ function dateControl(e) {
     // disable calendar 2 selection beyond the calendar 1 selected date
     var message = "Data (iki) negali būti ankstesnė nei prieš tai nurodyta data (nuo).";
 
-    if(calendar1Year > calendar2Year) {
+    if(calendar2 === '') {
+        true;
+    } else if(calendar1Year > calendar2Year) {
             alert(message);
             e.preventDefault();
-        } else if(calendar1Month === calendar2Month &&
-            calendar1Day > calendar2Day) {
-                alert(message);
-                e.preventDefault();
-            } else if(calendar1Year === calendar2Year &&
-                calendar1Month > calendar2Month) {
-                    alert(message);
-                    e.preventDefault();
-                }
+    } else if(calendar1Month === calendar2Month &&
+        calendar1Day > calendar2Day) {
+            alert(message);
+            e.preventDefault();
+    } else if(calendar1Year === calendar2Year &&
+        calendar1Month > calendar2Month) {
+            alert(message);
+            e.preventDefault();
+    }
 
     // disable date selection beyond current date
     var now = new Date();
     var maxDate = now.toISOString().substring(0,10);
 
     document.querySelector('.calendar-1').setAttribute('max', maxDate);
-    document.querySelector('.calendar-2').setAttribute('max', maxDate);
+    // document.querySelector('.calendar-2').setAttribute('max', maxDate);
     
     // e.preventDefault();
 }
