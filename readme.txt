@@ -23,4 +23,4 @@ Libraries: Bootstrap.
 # Duomenys generuojami, kai:
 - pasirenkama konkreti arba visos valiutos, be nustatytos datos - rodomi duomenys pagal paskiausią datą (šiandien arba vakar);
 - pasirenkama konkreti arba visos valiutos ir pirmoji data (nuo) - rodomi duomenys pagal nurodytą datą ir valiutą(-as);
-- pasirenkama konkreti valiuta(!) ir nustatomos abi datos (nuo ir iki) - duomenys rodomi pagal abi datas ir išvedamas pokytis procentais. (Būtent ši funkcija veikia tik su konrkečiomis valiutomis, bet neveikia pasirinkus 'visos valiutos'). 
+- pasirenkama konkreti valiuta(!) ir nustatomos abi datos (nuo ir iki) - duomenys rodomi pagal abi datas ir išvedamas pokytis procentais. (Būtent ši funkcija veikia tik su konkrečiomis valiutomis, bet neveikia pasirinkus 'visos valiutos'). 
