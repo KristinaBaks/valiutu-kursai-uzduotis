@@ -10,12 +10,12 @@ function dateControl(e) {
     var calendar2 = document.querySelector('.calendar-2').value;
 
     // disable weekends
-    var date1 = new Date(calendar1.replace(/[^\d\-]/g,','));
-    var date2 = new Date(calendar2.replace(/[^\d\-]/g,','));
+    var date1 = new Date(calendar1);
+    var date2 = new Date(calendar2);
     if(date1.getDay() == 0 || date1.getDay() == 6 ||
         date2.getDay() == 0 || date2.getDay() == 6){
         alert('Savaitgaliais valiutų kursų informacija nenaujinama.');
-    } 
+    }
 
     // disable new years, christmas
     var calendar1Year = calendar1.substring(0,4);
@@ -27,11 +27,11 @@ function dateControl(e) {
     var calendar2Day = calendar2.substring(8,10);
 
     if(calendar1Month === '01' && calendar1Day === '01' ||
-        calendar1Month === '01' && calendar1Day === '01' ||
+        calendar2Month === '01' && calendar2Day === '01' ||
         calendar1Month === '12' && calendar1Day === '25' ||
-        calendar1Month === '12' && calendar1Day === '25' ||
+        calendar2Month === '12' && calendar2Day === '25' ||
         calendar1Month === '12' && calendar1Day === '26' ||
-        calendar1Month === '12' && calendar1Day === '26' ) {
+        calendar2Month === '12' && calendar2Day === '26' ) {
             alert('Švenčių dienomis valiutų kursų informacija nenaujinama.');
         }
 
@@ -65,13 +65,13 @@ function dateControl(e) {
 
 //---------------- GET request - AJAX W/ CALLBACKS  -----------------
 
-function get(url, methodType, callback) { // could be GET / DELETE
+function get(url, methodType, callback) { 
     var xhr = new XMLHttpRequest();
 
     xhr.open(methodType, url, true);
     xhr.setRequestHeader( 'Content-type', 'text/xml');
-    xhr.setRequestHeader( "Access-Control-Allow-Origin", "*");
-    xhr.overrideMimeType('application/xml'); // for parsing the string into valid doc
+    // xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
+    xhr.overrideMimeType('application/xml');
 
     xhr.onload = function() {
         if(xhr.status === 200) {
@@ -159,7 +159,7 @@ function secondSelectedDate() {
 
                     // calculate the currency change throughout the selected dates
                     var currencyValue2 = child.children[2].textContent;
-                    var currencyValue_2 = parseFloat(currencyValue2.replace(/[^\d\.]/g,'.'));
+                    var currencyValue_2 = parseFloat(currencyValue2.replace(/[^\d\.]/g,'.')); // anything that's not a digit or a period is replaced with a period (match any char except digits and periods globally, and replace matched with a dot)
                     var currencyValue_1 = parseFloat(currencyValue1.replace(/[^\d\.]/g,'.'));
                     var currencyChange = Math.round(((currencyValue_2 - currencyValue_1) / currencyValue_2 * 100) * 10000) / 10000;
 
